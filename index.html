@@ -9,8 +9,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+
+    <!--CounterUp.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+    <!--Slidebox.js-->
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
 </head>
 
 <body>
@@ -56,10 +64,10 @@
     <!---------------------------------Banner section------------------------------->
 
     <section id="banner">
-        <div class="container">
+        <div class="container" style="padding-bottom: 100px;">
             <div class="row">
-                <div class="col-md-6" style="margin-top: 70px;">
-                    <p class="promo-title">Facilities for exploratory research on Nutrition Lab</p>
+                <div class="col-md-6">
+                    <p class="promo-title">Facility for Exploratory Research on Nutrition </p>
                     <p>
                         Development of mobile sensors for grain
                         quality trait and contaminant estimation
@@ -72,7 +80,66 @@
                 </div>
             </div>
         </div>
-        <img src="./images/bottom.svg" class="bottom-img">
+
+        <div class="container my-5" style="background: none; padding-bottom: 50px;">
+            <div class="wrapper">
+
+                <ul id="sb-slider" class="sb-slider">
+                    <li>
+                        <a href=""><img src="images/slider/Image1.jpg" alt="image1"/></a>
+                        <div class="sb-description">
+                            <h3>Creative Lifesaver</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/slider/Image2.jpg" alt="image2"/></a>
+                        <div class="sb-description">
+                            <h3>Honest Entertainer</h3>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href=""><img src="images/slider/Image5.jpg" alt="image1"/></a>
+                        <div class="sb-description">
+                            <h3>Faithful Investor</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/slider/Image6.jpg" alt="image1"/></a>
+                        <div class="sb-description">
+                            <h3>Groundbreaking Artist</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/slider/Image7.jpg" alt="image1"/></a>
+                        <div class="sb-description">
+                            <h3>Selfless Philantropist</h3>
+                        </div>
+                    </li>
+                </ul>
+
+                <div id="shadow" class="shadow"></div>
+
+                <div id="nav-arrows" class="nav-arrows">
+                    <a href="#">Next</a>
+                    <a href="#">Previous</a>
+                </div>
+
+                <div id="nav-options" class="nav-options">
+					<span id="navPlay">Play</span>
+					<span id="navPause">Pause</span>
+				</div>
+
+            </div><!-- /wrapper -->
+        </div>
+        
+        <div class="container text-center" style="max-width: 840px;width: 100%;">
+            <div class="row">
+               <h4>Rapid grain assessment quality in Field</h4>
+                <img src="./images/grain_quality_assessment.png.jpg" class="img-rounded" style="padding-bottom: 70px;  margin-right: 65px;height: 600px">
+            </div>
+        </div>
+        <img src="./images/footer.svg" class="bottom-img">
     </section>
 
 
@@ -80,10 +147,10 @@
 
     <section id="services">
 
-        <div class="container text-center">
-            <h1>WHAT WE DO?</h1>
+        <div class="container">
+            <h1 class="title text-center">WHAT WE DO?</h1>
 
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-4-lg">
                     <!-- Bootstrap Card -->
                     <div class="card" style="width:18rem;">
@@ -108,7 +175,7 @@
 
 
                             </p>
-                            <a href="#" class="btn btn-primary">More...</a>
+                            <a href="http://biofortification.icrisat.org" target="_blank" class="btn btn-primary">More...</a>
                         </div>
                     </div>
                 </div>
@@ -120,33 +187,13 @@
                             <p class="card-text">
                                 We propose CT technology that appears invaluable to gain the time advantage in evaluation basic grain properties (grain size, shape, damage) on a structural level.
                             </p>
-                            <a href="https://www.iis.fraunhofer.de/en/ff/zfp/tech/mobile-computertomographie.html#tabpanel-2" target="_blank" class="btn btn-primary">More...</a>
+                            <a href="https://www.iis.fraunhofer.de/en/ff/zfp/products/ctportable.html" target="_blank" class="btn btn-primary">More...</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script>
-            $(document).ready(function() {
-
-                $('.col-4-lg').hover(
-                    // trigger when mouse hover
-                    function() {
-                        $(this).animate({
-                            marginTop: "-=1%",
-                        }, 200);
-                    },
-
-                    // trigger when mouse out
-                    function() {
-                        $(this).animate({
-                            marginTop: "0%"
-                        }, 200);
-                    }
-                );
-            });
-        </script>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -164,7 +211,7 @@
         <div class="sensor">
             <div><img src="./images/sensors/nirs-mobile.png" onclick="window.open('https://www.honeag.com/', '_blank');"></div>
             <div><img src="./images/sensors/nirs-benchtop.png" onclick="window.open('https://www.fossanalytics.com/en-in/products/nirs-ds2500-flour-analyser', '_blank');"></div>
-            <div><img src="./images/sensors/CT.jpg" onclick="window.open('https://www.iis.fraunhofer.de/en/ff/zfp/tech/mobile-computertomographie.html#tabpanel-2', '_blank');"></div>
+            <div><img src="./images/sensors/CT.jpg" onclick="window.open('https://www.iis.fraunhofer.de/en/ff/zfp/products/ctportable.html', '_blank');"></div>
             <div><img src="./images/sensors/harvest-master.png" onclick="window.open('http://www.harvestmaster.com/Products/H2-Classic-GrainGage', '_blank');"></div>
         </div>
 
@@ -175,12 +222,399 @@
     <!---------------------------------Testimonials-------------------------------------->
 
     <section id="testimonials">
+        <h1 class="title text-center" style="padding-bottom: 20px;">PHENOTYPED TRAITS</h1>
+        <h5 class="text-center" style="color: #5f1782;">Priority traits identified in the crop improvement programs across CGIAR centers 
+            and sensor technologies being tested/deployed for their high-throughput assessment</h5>
         <div class="container-fluid">
-            <h1 class="title text-center">PHENOTYPED TRAITS</h1>
-            <div class="row offset-1" style="font-family: 'PT Sans Caption', sans-serif;">
-                <div class="row">
-                    <img src="./images/traits.png" alt="" style="width: 100%; height: 600px">
-                </div>
+            <div class="row" style="overflow: scroll;">
+                <table class="table table-bordered table-dark table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Crop/quality</th>
+                        <th scope="col">Seed size</th>
+                        <th scope="col">Seed color</th>
+                        <th scope="col">Seed shape</th>
+                        <th scope="col">Cooking time</th>
+                        <th scope="col">Malting</th>
+                        <th scope="col">Shelling %</th>
+                        <th scope="col">Rancidity</th>
+                        <th scope="col">Moisture %</th>
+                        <th scope="col">IVOMD</th>
+                        <th scope="col">Protein %</th>
+                        <th scope="col">Oleic acid %</th>
+                        <th scope="col">Oil content %</th>
+                        <th scope="col">Fe [ppm]</th>
+                        <th scope="col">Zn [ppm]</th>
+                        <th scope="col">Ca [ppm]</th>
+                        <th scope="col">Aflatoxins</th>
+                        <th scope="col">As [ppm]</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Chikpea</th>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+            
+                        </tr>
+                        <tr>
+                            <th scope="row">Cowpea</th>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Lentil</th>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Groundnut</th>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pigeonpea</th>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Beans</th>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Soybean</th>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Finger millet</th>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sorghum</th>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pearl millet</th>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                             <th scope="row">Maize</th>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rice</th>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                            <td class="table-warning"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-warning"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="font-weight-bold">Sensor technology</th>
+                            <td>Seed size</td>
+                            <td>Seed color</td>
+                            <td>Seed shape</td>
+                            <td>Cooking time</td>
+                            <td>Malting</td>
+                            <td>Shelling %</td>
+                            <td>Rancidity</td>
+                            <td>Moisture %</td>
+                            <td>IVOMD</td>
+                            <td>Protein %</td>
+                            <td>Oleic acid %</td>
+                            <td>Oil content %</td>
+                            <td>Fe[ppm]</td>
+                            <td>Zn[ppm]</td>
+                            <td>Ca[ppm]</td>
+                            <td>Aflatoxins</td>
+                            <td>As[ppm]</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NIRs #</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">XRF</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CT</th>
+                            <td class="table-danger"></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Raman Spectra</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Visible spectra</th>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="table-danger"></td>
+                            <td></td>
+                        </tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
             </div>
 
         </div>
@@ -200,24 +634,24 @@
                     <div class="col">
                         <i class="fa fa-tasks" aria-hidden="true"></i>
                         <div class="num">6</div>
-                        Projects
+                        Ongoing Projects
                     </div>
 
                     <div class="col">
                         <i class="fa fa-leaf" aria-hidden="true"></i>
                         <div class="num">25000</div>
-                        Phenotyped
+                        Phenotyped Samples
                     </div>
 
                     <div class="col">
                         <i class="fa fa-users" aria-hidden="true"></i>
-                        <div class="num">687</div>
-                        BENECIFIARIES
+                        <div class="num">25</div>
+                        Collaborating Institutes
                     </div>
 
                     <div class="col">
                         <i class="fa fa-file-text" aria-hidden="true"></i>
-                        <div class="num">187</div>
+                        <div class="num"> 190</div>
                         Publications
                     </div>
                 </div>
@@ -260,6 +694,29 @@
         </div>
     </section>
 
+     <!--CounterUp.js-->
+
+     <script>
+        $(document).ready(function() {
+
+            $('.col-4-lg').hover(
+                // trigger when mouse hover
+                function() {
+                    $(this).animate({
+                        marginTop: "-=1%",
+                    }, 200);
+                },
+
+                // trigger when mouse out
+                function() {
+                    $(this).animate({
+                        marginTop: "0%"
+                    }, 200);
+                }
+            );
+        });
+    </script>
+
     <!------------------------------Smooth Scroll-------------------------------------->
     <script src="smooth-scroll.js"></script>
     <script>
@@ -272,6 +729,79 @@
                 delay: 10,
                 time: 1000
             });
+    </script>
+
+
+    <!------------------------------Slidebox.js----------------------------------------->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var Page = (function() {
+
+                var $navArrows = $( '#nav-arrows' ).hide(),
+                    $navOptions = $( '#nav-options' ).hide(),
+                    $shadow = $( '#shadow' ).hide(),
+                    slicebox = $( '#sb-slider' ).slicebox( {
+                        onReady : function() {
+
+                            $navArrows.show();
+                            $navOptions.show();
+                            $shadow.show();
+
+                        },
+                        orientation : 'r',
+                        cuboidsRandom : true,
+                        disperseFactor : 30,
+                        autoplay : true
+                    } ),
+                    
+                    init = function() {
+
+                        initEvents();
+                        
+                    },
+                    initEvents = function() {
+
+                        // add navigation events
+                        $navArrows.children( ':first' ).on( 'click', function() {
+
+                            slicebox.next();
+                            return false;
+
+                        } );
+
+                        $navArrows.children( ':last' ).on( 'click', function() {
+                            
+                            slicebox.previous();
+                            return false;
+
+                        } );
+
+                        $( '#navPlay' ).on( 'click', function() {
+                            
+                            slicebox.play();
+                            return false;
+
+                        } );
+
+                        $( '#navPause' ).on( 'click', function() {
+                            
+                            slicebox.pause();
+                            return false;
+
+                        } );
+
+                    };
+
+                    return { init : init };
+
+            })();
+
+            Page.init();
+
+        });
     </script>
 
 </body>
