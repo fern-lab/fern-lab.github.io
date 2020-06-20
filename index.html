@@ -130,10 +130,15 @@
                     <a href="#">Previous</a>
                 </div>
 
-                <div id="nav-options" class="nav-options">
-					<span id="navPlay">Play</span>
-					<span id="navPause">Pause</span>
-				</div>
+                <div id="nav-dots" class="nav-dots">
+                    <span class="nav-dot-current"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
             </div><!-- /wrapper -->
         </div>
@@ -746,20 +751,28 @@
             var Page = (function() {
 
                 var $navArrows = $( '#nav-arrows' ).hide(),
-                    $navOptions = $( '#nav-options' ).hide(),
+                    $navDots = $( '#nav-dots' ).hide(),
+                    $nav = $navDots.children( 'span' ),
                     $shadow = $( '#shadow' ).hide(),
                     slicebox = $( '#sb-slider' ).slicebox( {
                         onReady : function() {
 
                             $navArrows.show();
-                            $navOptions.show();
+                            $navDots.show();
                             $shadow.show();
 
                         },
                         orientation : 'r',
                         cuboidsRandom : true,
                         disperseFactor : 30,
-                        autoplay : true
+                        autoplay : true,
+
+                        onBeforeChange : function( pos ) {
+
+                                $nav.removeClass( 'nav-dot-current' );
+                                $nav.eq( pos ).addClass( 'nav-dot-current' );
+
+                            }
                     } ),
                     
                     init = function() {
@@ -784,21 +797,26 @@
 
                         } );
 
-                        $( '#navPlay' ).on( 'click', function() {
+                        $nav.each( function( i ) {
                             
-                            slicebox.play();
-                            return false;
+                                $( this ).on( 'click', function( event ) {
+                                    
+                                    var $dot = $( this );
+                                    
+                                    if( !slicebox.isActive() ) {
+
+                                        $nav.removeClass( 'nav-dot-current' );
+                                        $dot.addClass( 'nav-dot-current' );
+                                    
+                                    }
+                                    
+                                    slicebox.jump( i + 1 );
+                                    return false;
 
                         } );
+                    } );
 
-                        $( '#navPause' ).on( 'click', function() {
-                            
-                            slicebox.pause();
-                            return false;
-
-                        } );
-
-                    };
+                };
 
                     return { init : init };
 
